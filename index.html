@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Начало - PCHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function getRandomProducts() {
+            const products = [
+                { img: 'computer1.jpg', name: 'Компютър 1', price: '1200 лв.' },
+                { img: 'computer2.jpg', name: 'Компютър 2', price: '1400 лв.' },
+                { img: 'computer3.jpg', name: 'Компютър 3', price: '1500 лв.' },
+                { img: 'computer4.jpg', name: 'Компютър 4', price: '1600 лв.' },
+                { img: 'monitor1.jpg', name: 'Монитор 1', price: '500 лв.' },
+                { img: 'monitor2.jpg', name: 'Монитор 2', price: '550 лв.' },
+                { img: 'monitor3.jpg', name: 'Монитор 3', price: '600 лв.' },
+                { img: 'monitor4.jpg', name: 'Монитор 4', price: '700 лв.' },
+                { img: 'graphics-card1.jpg', name: 'Видеокарта 1', price: '700 лв.' },
+                { img: 'graphics-card2.jpg', name: 'Видеокарта 2', price: '750 лв.' }
+            ];
+
+            const shuffledProducts = products.sort(() => 0.5 - Math.random()).slice(0, 6);
+
+            for (let i = 0; i < 6; i++) {
+                document.getElementById(`random-product-img-${i}`).src = shuffledProducts[i].img;
+                document.getElementById(`random-product-name-${i}`).innerText = shuffledProducts[i].name;
+                document.getElementById(`random-product-price-${i}`).innerText = shuffledProducts[i].price;
+            }
+        }
+
+        window.onload = getRandomProducts;
+    </script>
+</head>
+<body>
+
+    <div id="logo"><a href="index.html">PCHub</a></div>
+
+    <ul class="navbar">
+        <li><a href="index.html" class="active">Начало</a></li>
+        <li><a href="computers.html">Компютри</a></li>
+        <li><a href="monitors.html">Монитори</a></li>
+        <li><a href="graphics-cards.html">Видеокарти</a></li>
+        <li><a href="about.html">За нас</a></li>
+        <li><a href="contact.html">Контакти</a></li>
+    </ul>
+
+    <div class="content-section">
+        <h2>Нашите продукти</h2>
+        <div class="product-gallery">
+            <div class="product-item">
+                <img id="random-product-img-0" src="" alt="Рандом продукт 1" class="product-img">
+                <h3 id="random-product-name-0"></h3>
+                <p id="random-product-price-0" class="price"></p>
+            </div>
+            <div class="product-item">
+                <img id="random-product-img-1" src="" alt="Рандом продукт 2" class="product-img">
+                <h3 id="random-product-name-1"></h3>
+                <p id="random-product-price-1" class="price"></p>
+            </div>
+            <div class="product-item">
+                <img id="random-product-img-2" src="" alt="Рандом продукт 3" class="product-img">
+                <h3 id="random-product-name-2"></h3>
+                <p id="random-product-price-2" class="price"></p>
+            </div>
+            <div class="product-item">
+                <img id="random-product-img-3" src="" alt="Рандом продукт 4" class="product-img">
+                <h3 id="random-product-name-3"></h3>
+                <p id="random-product-price-3" class="price"></p>
+            </div>
+            <div class="product-item">
+                <img id="random-product-img-4" src="" alt="Рандом продукт 5" class="product-img">
+                <h3 id="random-product-name-4"></h3>
+                <p id="random-product-price-4" class="price"></p>
+            </div>
+            <div class="product-item">
+                <img id="random-product-img-5" src="" alt="Рандом продукт 6" class="product-img">
+                <h3 id="random-product-name-5"></h3>
+                <p id="random-product-price-5" class="price"></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 PCHub. Всички права запазени.</p>
+        <p class="footer-text">Изготвил: Ангел Петров №109 СИ</p>
+    </footer>
+
+</body>
+</html>
